@@ -7,6 +7,9 @@
 
 # VS generated files
 *.VC.db
+*.VC.db-shm
+*.VC.db-wal
+*.VC.opendb
 
 # Specific to projects
-Building_Escape/Building_Escape/Content/StarterContent/
+Building_Escape/Content/StarterContent/
