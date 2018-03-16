@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Components/PrimitiveComponent.h"
+#include "Engine/World.h"
+#include "GameFramework/PlayerController.h"
 #include "GameFramework/Actor.h"
 #include "Engine/TriggerVolume.h"
 #include "OpenDoor.generated.h"
@@ -27,6 +30,7 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+
 		
 private:
 	UPROPERTY(EditAnywhere)
@@ -40,6 +44,8 @@ private:
 
 	float LastDoorOpenTime;
 
-	AActor* ActorThatOpens;
 	AActor* Owner;
+
+	// Returns total mass in kg
+	float GetTotalMassOfActorsOnPlate();
 };
